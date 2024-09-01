@@ -5,9 +5,9 @@ const next = document.querySelector("#next");
 const prev = document.querySelector("#prev");
 
 // Auto Play Slider
-// let runAutoPlay = setTimeout(() => {
-//   next.click();
-// }, 8000);
+let runAutoPlay = setTimeout(() => {
+  next.click();
+}, 8000);
 
 next.addEventListener("click", () => {
   initSlider("next");
@@ -37,8 +37,8 @@ const initSlider = (type) => {
     slider.classList.remove("prev");
   }, 2000);
 
-  //   clearTimeout(runAutoPlay);
-  //   runAutoPlay = setTimeout(() => {
-  //     next.click();
-  //   }, 8000);
+    clearTimeout(runAutoPlay);
+    runAutoPlay = setTimeout(() => {
+      next.click();
+    }, 8000);
 };
